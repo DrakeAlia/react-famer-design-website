@@ -10,11 +10,12 @@ import {
   HeroImage,
   HeroContent,
   ButtonWrapper,
-//   CharacterContainer,
+  //   CharacterContainer,
 } from "./HeroStyles";
 import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
+  const dragConstraints = { top: 0, bottom: 0, right: 0, left: 0 };
   const variants = {
     hover: {
       y: 15,
@@ -37,9 +38,30 @@ const Hero = () => {
     <HeroSection>
       <HeroImage className="pattern" src="./images/hero-pattern-bg-lg.png" />
       <HeroImage className="guy" src="./images/hero-guy-1.png" />
-      <ImageCharacter className="one" src="./images/image 1.png" />
-      <ImageCharacter className="two" src="./images/image 2.png" />
-      <ImageCharacter className="three" src="./images/image 3.png" />
+      <ImageCharacter
+        variants={variants}
+        whileHover="hover"
+        drag
+        dragConstraints={dragConstraints}
+        className="one"
+        src="./images/image 1.png"
+      />
+      <ImageCharacter
+        variants={variants}
+        whileHover="hover"
+        drag
+        dragConstraints={dragConstraints}
+        className="two"
+        src="./images/image 2.png"
+      />
+      <ImageCharacter
+        variants={variants}
+        whileHover="hover"
+        drag
+        dragConstraints={dragConstraints}
+        className="three"
+        src="./images/image 3.png"
+      />
 
       <HeroContent>
         <Heading>We are Designify</Heading>
