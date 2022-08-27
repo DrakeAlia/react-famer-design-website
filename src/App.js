@@ -8,7 +8,7 @@ function App() {
     <Router>
       <GlobalStyle />
       <Routes>
-        <Route path="/" exact component={HomePage} />
+        <Route path="/" exact element={<HomePage />} />
       </Routes>
     </Router>
   );

@@ -6,7 +6,7 @@ import {
   HeroText,
   ButtonContainer,
   HeroButton,
-//   ImageCharacter,
+  ImageCharacter,
   HeroImage,
   HeroContent,
   ButtonWrapper,
@@ -15,7 +15,7 @@ import {
 import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
-  const variant = {
+  const variants = {
     hover: {
       y: 15,
       transition: {
@@ -37,9 +37,9 @@ const Hero = () => {
     <HeroSection>
       <HeroImage className="pattern" src="./images/hero-pattern-bg-lg.png" />
       <HeroImage className="guy" src="./images/hero-guy-1.png" />
-      <HeroImage className="one" src="./images/image 1.png" />
-      <HeroImage className="two" src="./images/image 2.png" />
-      <HeroImage className="three" src="./images/image 3.png" />
+      <ImageCharacter className="one" src="./images/image 1.png" />
+      <ImageCharacter className="two" src="./images/image 2.png" />
+      <ImageCharacter className="three" src="./images/image 3.png" />
 
       <HeroContent>
         <Heading>We are Designify</Heading>
@@ -50,7 +50,7 @@ const Hero = () => {
         <ButtonContainer>
           <ButtonWrapper>
             <HeroButton
-            //   onClick={toggleModal}
+              //   onClick={toggleModal}
               className={inView ? "" : "corner"}
             >
               {inView ? (
