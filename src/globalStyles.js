@@ -35,3 +35,5 @@ export const Heading = styled.h2`
   font-weight: 600;
   color: ${({ lightText }) => (lightText ? "#f7f8fa" : "1c2237")};
 `;
+
+export default GlobalStyle;
