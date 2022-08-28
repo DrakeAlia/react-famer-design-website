@@ -12,7 +12,7 @@ import {
   NavLinks,
   NavItem,
 } from "./NavbarStyles";
-import { navbarData } from "../../data/NavBarData";
+import { navbarData } from "../../data/NavbarData";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -31,28 +31,29 @@ const Navbar = () => {
   };
 
   return (
-    <IconContext.Provider>
+    <IconContext.Provider value={{ color: "#fff" }}>
       <Nav>
         <NavbarContainer>
           <NavLogo to="/">
-            <NavLogo src="./images.logo.svg" alt="logo">
-              Designify
-            </NavLogo>
-            <MobileIcon onClick={() => setShow(!show)}>
-              {show ? <FaTimes /> : <CgMenuRight />}
-            </MobileIcon>
-            {/* Mapping over all the arrays in the navbarData */}
-            {/* It creates a new nav item */}
-            <NavMenu show={show}>
-              {navbarData.map((el, index) => (
-                <NavItem key={index}>
-                  <NavLinks to="/" onClick={() => closeMobileMenu(el.to)}>
-                    {el.text}
-                  </NavLinks>
-                </NavItem>
-              ))}
-            </NavMenu>
+            <NavIcon src="./images/logo.svg" alt="" />
+            esignify
           </NavLogo>
+          {/* Inital show will be false but when you click on the nav icon it becomes true */}
+          <MobileIcon onClick={() => setShow(!show)}>
+            {show ? <FaTimes /> : <CgMenuRight />}
+          </MobileIcon>
+          {/* Mapping over all the arrays in the navbarData */}
+          {/* It creates a new nav item, with every new nav item is a nav link */}
+          {/* Every time we click on the nav link it's going to scroll us to the section we click on */}
+          <NavMenu show={show}>
+            {navbarData.map((el, index) => (
+              <NavItem key={index}>
+                <NavLinks to="/" onClick={() => closeMobileMenu(el.to)}>
+                  {el.text}
+                </NavLinks>
+              </NavItem>
+            ))}
+          </NavMenu>
         </NavbarContainer>
       </Nav>
     </IconContext.Provider>
