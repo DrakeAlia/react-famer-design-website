@@ -12,7 +12,7 @@ import {
   NavLinks,
   NavItem,
 } from "./NavbarStyles";
-import { navbarData } from "../../data/NavbarData";
+import { } from "../../data/NavbarData";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);

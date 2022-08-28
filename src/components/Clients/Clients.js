@@ -12,6 +12,8 @@ import {
 } from './ClientsStyles';
 import { clientsData } from '../../data/ClientsData';
 
+// displaying the different clients(compaines) to the user
+
 const Clients = () => {
     return (
         <ClientSection id="clients">
