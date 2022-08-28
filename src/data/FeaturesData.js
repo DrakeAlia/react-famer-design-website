@@ -6,6 +6,8 @@ import { HiCode } from 'react-icons/hi';
 import { MdSlowMotionVideo } from 'react-icons/md';
 import { FaPhotoVideo } from 'react-icons/fa';
 
+// This contains the data array that we use in the Features file 
+
 const iconStyle = (Icon) => <Icon size="3rem" color="#fefefe" />;
 
 export const featuresData = [
