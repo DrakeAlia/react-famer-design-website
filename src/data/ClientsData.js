@@ -1,3 +1,4 @@
+// The data array for the compaines that are used in client.js
 export const clientsData = [
     [{ name: 'airbnb' }],
     [{ name: 'amazon' }, { name: 'apple' }],
