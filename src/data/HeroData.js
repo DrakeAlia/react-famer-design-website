@@ -1,3 +1,5 @@
+// Hero data that we use in the homepage component that proivdes data for our content
+
 export const heroOne = {
     id: 'projects',
     topLine: {

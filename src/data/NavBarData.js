@@ -1,3 +1,4 @@
+// Navbar data array which is used in our navbar component
 export const navbarData = [
     {
         to: 'about',
