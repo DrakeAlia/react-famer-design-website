@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { Container } from '../../globalStyles';
 import {
     FeatureText,
@@ -11,15 +11,11 @@ import {
     FeatureTextWrapper,
 } from './FeaturesStyles';
 
-// When the use scrolls down or clicks about button in the nav 
-// they are taken to features section of the app
+import { featuresData } from '../../data/FeaturesData';
 
-import { featuresData } from "../../data/FeaturesData";
-
-// jsx
-function Features() {
+const Features = () => {
     return (
-        <FeatureSection id='about'>
+        <FeatureSection id="about">
             <Container>
                 <FeatureTextWrapper>
                     <FeatureTitle>What We Do</FeatureTitle>
@@ -37,7 +33,7 @@ function Features() {
                 </FeatureWrapper>
             </Container>
         </FeatureSection>
-    )
-}
+    );
+};
 
 export default Features;

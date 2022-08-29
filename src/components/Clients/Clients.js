@@ -12,8 +12,6 @@ import {
 } from './ClientsStyles';
 import { clientsData } from '../../data/ClientsData';
 
-// displaying the different clients(compaines) to the user
-
 const Clients = () => {
     return (
         <ClientSection id="clients">
@@ -24,8 +22,6 @@ const Clients = () => {
                 </ClientTextWrapper>
 
                 <ClientRow>
-                {/* looping over the clients twice, looping over the columns to display the columns  */}
-                {/* looping over the rows to display the rows */}
                     {clientsData.map((clients, clientsIndex) => (
                         <ClientColumn key={clientsIndex}>
                             {clients.map((el, index) => (

@@ -16,8 +16,6 @@ import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
 import Tilt from 'react-tilt';
 
-// displays and animates the content section of the app
-
 const Content = ({
     primary,
     topLine,
@@ -26,10 +24,14 @@ const Content = ({
     buttonLabel,
     img,
     alt,
+    start,
+    bottomImg,
     backgroundColor,
+    linkTo,
     inverse,
     reverse,
     bigImage,
+    id,
 }) => {
     const initial = { opacity: 0, y: 30 };
     const transition = { delay: 0.3, duration: 0.6 };
@@ -39,7 +41,6 @@ const Content = ({
         threshold: 0.2,
     });
 
-    // When in view animate
     useEffect(() => {
         if (inView) {
             animation.start({
@@ -96,7 +97,6 @@ const Content = ({
                         animate={animation}
                         bigImage={bigImage}
                     >
-                        {/* Tilt animation */}
                         <Tilt className="Tilt" options={{ max: 20, scale: 1.01, speed: 200 }}>
                             <ImgWrapper backgroundColor={backgroundColor}>
                                 <Img

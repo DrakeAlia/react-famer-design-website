@@ -67,7 +67,6 @@ export const FeatureColumn = styled.div`
 	}
 `;
 
-// Different background gradients
 export const FeatureImageWrapper = styled.div`
 	margin-bottom: 1rem;
 	border-radius: 50%;

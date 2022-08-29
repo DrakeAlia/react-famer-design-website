@@ -65,7 +65,6 @@ export const ClientColumn = styled.div`
 	align-items: center;
 	margin: 0.4rem;
 
-    /* for every column, we want to hide the div that is not the first child of the column  */
 	@media screen and (max-width: 1100px) {
 		div:not(:first-child) {
 			display: none;
