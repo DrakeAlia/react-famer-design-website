@@ -24,14 +24,10 @@ const Content = ({
     buttonLabel,
     img,
     alt,
-    start,
-    bottomImg,
-    backgroundColor,
-    linkTo,
+    backgroundcolor,
     inverse,
     reverse,
-    bigImage,
-    id,
+    bigimage,
 }) => {
     const initial = { opacity: 0, y: 30 };
     const transition = { delay: 0.3, duration: 0.6 };
@@ -85,7 +81,7 @@ const Content = ({
                                 transition={{ delay: 1, duration: 0.6 }}
                                 animate={animation}
                                 primary={primary}
-                                backgroundColor={backgroundColor}
+                                backgroundcolor={backgroundcolor}
                             >
                                 {buttonLabel}
                             </ContentButton>
@@ -95,10 +91,10 @@ const Content = ({
                         initial={initial}
                         transition={transition}
                         animate={animation}
-                        bigImage={bigImage}
+                        bigimage={bigimage}
                     >
                         <Tilt className="Tilt" options={{ max: 20, scale: 1.01, speed: 200 }}>
-                            <ImgWrapper backgroundColor={backgroundColor}>
+                            <ImgWrapper backgroundcolor={backgroundcolor}>
                                 <Img
                                     src={img}
                                     alt={alt}
